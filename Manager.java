@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package supermarketmanagment;
+package cs162s21gid07;
 
-import java.util.Date;
+import java.util.*;
 
 /**
  *
  * @author Track Computers
  */
- class Manager extends Person{
-    public Date dateOfJoining;
+public class Manager extends Person{
+   public Date dateOfJoining;
     public String qualification;
     public Date dateOfBirth;
     public static Boolean viewItems()
@@ -32,5 +32,5 @@ import java.util.Date;
        public static Boolean updateItems()
     {
         return true;
-    }
+    }   
 }

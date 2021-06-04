@@ -5,21 +5,26 @@
  */
 package cs162s21gid07;
 
-import java.util.Date;
+import java.util.*;
 
 /**
  *
  * @author Track Computers
  */
-public class customer {
-    public Date DateOfPurchasing;
-    public int PayCash()
+public class cashier {
+     public int DailySoldItems()
     {
-        return 3;
+        return 7;
     }
     
-    public Boolean ReturnThing()
+    /**
+     *
+     * @return
+     */
+    public java.util.List<customer> makeBills()
     {
-        return false;
+        java.util.List<customer> blist=new ArrayList<>();
+        return blist;
     }
+
 }

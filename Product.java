@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package supermarketmanagment;
+package cs162s21gid07;
 import java.util.*;
 /**
  *
  * @author Track Computers
  */
 public class Product {
-    public List<String> Grocery;
-    public List<String> Vegetable;
-    public List<String> medicine;
+     public java.util.List<String> Grocery;
+    public java.util.List<String> Vegetable;
+    public java.util.List<String> medicine;
 }

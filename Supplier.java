@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package supermarketmanagment;
+package cs162s21gid07;
 
 import java.util.Date;
 
@@ -11,12 +11,12 @@ import java.util.Date;
  *
  * @author Track Computers
  */
-public class Supplier extends Person{
-    public String companyAssociation;
+public class Supplier {
+     public String companyAssociation;
     public Date dateOfSupplier;
     public static void getCash()
     {
         
     }
-    
+
 }

@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package supermarketmanagment;
-import java.util.*;
+package cs162s21gid07;
 
 /**
  *
  * @author Track Computers
  */
 public class Stock {
-    public list<Product> remainingProduct;
-    public Date dateOfArrival;
     
 }
