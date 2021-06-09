@@ -5,10 +5,16 @@
  */
 package cs162s21gid07;
 
+import java.util.*;
 /**
  *
  * @author Track Computers
  */
 public class Manager {
-    
+    private Date DateOfJoining;
+    private double salary;
+    public static String ViewItems()
+    {
+        return "hi";
+    }
 }
