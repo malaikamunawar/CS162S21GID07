@@ -10,11 +10,41 @@ import java.util.*;
  *
  * @author Track Computers
  */
-public class Manager {
+public class Manager extends Person {
     private Date DateOfJoining;
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+    public Date dateOfBirth;
     private double salary;
+    
+ public Date getDateOfJoining() {
+        return DateOfJoining;
+    }
+
+    public double getSalary() {
+        return salary;
+}
+    
+    
     public static String ViewItems()
     {
         return "hi";
+    }
+    
+     public static Boolean deleteItems()
+    {
+        return false;
+    }
+     
+      public static Boolean  updateItems()
+    {
+        return false;
+    }
+      
+       public static Boolean addItems()
+    {
+        return false;
     }
 }

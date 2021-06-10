@@ -16,6 +16,8 @@ public class CS162S21GID07 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        MainDashBoard m=new MainDashBoard();
+        m.setVisible(true);
     }
     
 }
