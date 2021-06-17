@@ -21,8 +21,36 @@ DefaultTableModel model;
      */
     public PurchasingList() {
         initComponents();
-         
+         this.model = new DefaultTableModel();
+        model.addColumn("Product Name");
+        model.addColumn("Product Item ");
+        model.addColumn("Price ");
+        jTable1.setModel(model);
 
+    }
+     //ArrayList
+    public ArrayList ListForm(String ProName, String ProItem, String price)
+    {
+        ArrayList<Product> list = new ArrayList<>() ;
+        Product f = new Product(ProName, ProItem, price);
+        list.add(f);
+        return list;
+      }
+    
+    //Add list to table
+    public void addRow(String ProName, String ProItem, String price)
+    {
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+         ArrayList<Product> list = ListForm(ProName, ProItem, price);
+         Object rowData[] = new Object[3];
+         for (int i =0 ;i < list.size(); i++)
+         {
+             rowData[0] = list.get(i).ProName;
+             rowData[1] = list.get(i).ProItem;
+             rowData[2] = list.get(i).price;
+           
+             model.addRow(rowData);
+         }
     }
     
     
@@ -40,7 +68,7 @@ DefaultTableModel model;
         add = new javax.swing.JButton();
         delete = new javax.swing.JButton();
         update = new javax.swing.JButton();
-        productName = new javax.swing.JTextField();
+        ProductName = new javax.swing.JTextField();
         ProductItem = new javax.swing.JTextField();
         Price = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -73,6 +101,11 @@ DefaultTableModel model;
         });
 
         delete.setText("delete");
+        delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteActionPerformed(evt);
+            }
+        });
 
         update.setText("update");
         update.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +151,7 @@ DefaultTableModel model;
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(Price, javax.swing.GroupLayout.DEFAULT_SIZE, 97, Short.MAX_VALUE)
                                 .addComponent(ProductItem)
-                                .addComponent(productName))))
+                                .addComponent(ProductName))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(192, 192, 192)
                         .addComponent(jLabel4)
@@ -150,7 +183,7 @@ DefaultTableModel model;
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(productName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ProductName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1))
                         .addGap(27, 27, 27)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,12 +205,61 @@ DefaultTableModel model;
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         // TODO add your handling code here:
+        
+        String ProdName = ProductName.getText();
+             String ProdItem = ProductItem.getText();
+             String price = Price.getText();
+            addRow( ProdName, ProdItem,  price);                  //ADD
+             ProductName.setText("");
+             ProductItem.setText("");
+             Price.setText("");
     }//GEN-LAST:event_addActionPerformed
 
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
         // TODO add your handling code here:
-                                                  
+                           DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
+        if(jTable1.getSelectedRowCount()==1){
+             String ProdNameString = ProductName.getText();
+             String ProdItemString = ProductItem.getText();
+             String price = Price.getText();
+        
+        
+        jTable1.setValueAt(ProdNameString, jTable1.getSelectedRow(), 0);
+        jTable1.setValueAt(ProdItemString, jTable1.getSelectedRow(), 1);
+        jTable1.setValueAt(price, jTable1.getSelectedRow(), 2);
+        
+        JOptionPane.showMessageDialog(null," Updated Successfully");
+        }
+        else{
+        if(jTable1.getRowCount()==0){
+            JOptionPane.showMessageDialog(null,"Table is empty");
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"Please select any row!");
+        }
+        }     
+        
     }//GEN-LAST:event_updateActionPerformed
+
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
+        // TODO add your handling code here:
+         DefaultTableModel model= (DefaultTableModel) jTable1.getModel();
+        if(jTable1.getSelectedRowCount()==1)
+        {
+            model.removeRow(jTable1.getSelectedRow());
+        }
+        else
+        {
+            if(jTable1.getRowCount()==0)
+            {
+            JOptionPane.showMessageDialog(null,"Table is empty");
+        }
+        else{
+           JOptionPane.showMessageDialog(null,"Please select any row!");
+        }
+        }
+
+    }//GEN-LAST:event_deleteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -217,6 +299,7 @@ DefaultTableModel model;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Price;
     private javax.swing.JTextField ProductItem;
+    private javax.swing.JTextField ProductName;
     private javax.swing.JButton add;
     private javax.swing.JButton delete;
     private javax.swing.JLabel jLabel1;
@@ -227,7 +310,6 @@ DefaultTableModel model;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField productName;
     private javax.swing.JButton update;
     // End of variables declaration//GEN-END:variables
 }

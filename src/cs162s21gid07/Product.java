@@ -11,11 +11,21 @@ import java.util.*;
  * @author Track Computers
  */
 public class Product {
+    public String ProName;
+    public String ProItem;
+    public String price;
     public List vegetable;
        public List Grocery;
           public List madicineList;
     
     Object medicineList;
+
+    Product(String ProName, String proItem, String amount) {
+    this.ProName=ProName;
+    this.ProItem=proItem;
+    this.price=amount;
+    
+    }
 
     public List getVegetable() {
         return vegetable;
