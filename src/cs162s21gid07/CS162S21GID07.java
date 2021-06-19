@@ -5,6 +5,8 @@
  */
 package cs162s21gid07;
 
+
+
 /**
  *
  * @author Malaika
@@ -16,8 +18,9 @@ public class CS162S21GID07 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        MainDashBoard m=new MainDashBoard();
+       MainDashBoard m=new MainDashBoard();
         m.setVisible(true);
+       // Product p=new Product(vegetable,new Grocery(),"apple");
     }
     
 }
