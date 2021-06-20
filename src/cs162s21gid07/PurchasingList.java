@@ -255,7 +255,7 @@ DefaultTableModel model;
             JOptionPane.showMessageDialog(null,"Table is empty");
         }
         else{
-            JOptionPane.showMessageDialog(null,"Please select any row!");
+            JOptionPane.showMessageDialog(null,"Please select a row");
         }
         }     
         
@@ -275,7 +275,7 @@ DefaultTableModel model;
             JOptionPane.showMessageDialog(null,"Table is empty");
         }
         else{
-           JOptionPane.showMessageDialog(null,"Please select any row!");
+           JOptionPane.showMessageDialog(null,"Dear User,\nPlease fill the Rows!");
         }
         }
 
