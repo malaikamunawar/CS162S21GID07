@@ -12,7 +12,24 @@ import java.util.*;
  */
 public class Manager extends Person {
     private Date DateOfJoining;
-
+    public int AmtGivenToSupplier;
+    public String ThingTakenBySupplier;
+    private static Manager getinstance=null;
+    
+    public Manager(){
+    }
+     public static Manager getinstance()
+    {
+       // Object getinstance;
+        if (getinstance==null) 
+        {
+               getinstance=new Manager();
+ 
+        }
+        return getinstance;
+    }
+    
+    
     public void setSalary(double salary) {
         this.salary = salary;
     }

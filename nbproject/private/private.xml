@@ -3,31 +3,29 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/customer.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/Issuebill.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/MainDashBoard.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/view.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/Manager.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/update.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/Supplier.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/ownerlogin.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/LoginsChoice.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/Cashier.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/Product.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/CS162S21GID07.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/create.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/Discount.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/cashierlogin.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cashierlogin.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/returnform.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/credientials.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/managerlogin.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/BillHistory.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/PurchasingList.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/Owner.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/history.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/Stock.java</file>
-            <file>file:/D:/Studies/Assignments%202/CS162S21GID07/src/cs162s21gid07/Person.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/managerlogin.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/history.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/Supplier.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/cashierlogin.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/Cashier.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/credientials.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/returnform.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/CS162S21GID07.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/Person.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/BillHistory.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/LoginsChoice.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/Discount.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/MainDashBoard.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/create.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/PurchasingList.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/view.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/Product.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/Issuebill.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/Owner.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/customer.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/update.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/Manager.java</file>
+            <file>file:/D:/notes2ndsem/github/CS162S21GID07/src/cs162s21gid07/Stock.java</file>
         </group>
     </open-files>
 </project-private>

@@ -21,6 +21,10 @@ public class CS162S21GID07 {
         // TODO code application logic here
        MainDashBoard m=new MainDashBoard();
         m.setVisible(true);
+        Manager ma=new Manager();
+        Stock s=new Stock();
+        Owner o=new Owner();
+        o.SaveData(ma, s);
        // Product p=new Product(vegetable,new Grocery(),"apple");
     }
     
