@@ -32,23 +32,36 @@ public class managerlogin extends javax.swing.JFrame {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
-        Name = new javax.swing.JTextPane();
+
+
+        mnameinput = new javax.swing.JTextPane();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        Password = new javax.swing.JPasswordField();
+        mpasswordinput = new javax.swing.JPasswordField();
+
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jInternalFrame1.setVisible(true);
 
-        jScrollPane1.setViewportView(Name);
+
+
+        jScrollPane1.setViewportView(mnameinput);
+
 
         jLabel1.setText("Username");
 
         jLabel2.setText("Password");
 
-        Password.setText("jPasswordField1");
+
+
+        mpasswordinput.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mpasswordinputActionPerformed(evt);
+            }
+        });
+
 
         jButton1.setText("Ok");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +84,10 @@ public class managerlogin extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jScrollPane1)
-                        .addComponent(Password, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)))
+
+
+                        .addComponent(mpasswordinput, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)))
+
                 .addContainerGap(45, Short.MAX_VALUE))
         );
         jInternalFrame1Layout.setVerticalGroup(
@@ -84,10 +100,13 @@ public class managerlogin extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+
+
+                    .addComponent(mpasswordinput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(jButton1)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
+
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -105,21 +124,35 @@ public class managerlogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+ 
+
+       Person Manager = new Person();
+        String m_name = new String();
+        m_name = "muhammadahmed";
+        //setName(m_name);
         
-         JFrame j=new JFrame();
-        String n=Name.getText();
-         String p=Password.getText();
-         if ((Name.getText().trim().isEmpty() ||Password.getText().trim().isEmpty())&&
-                 (n.equals("Manager")||p.equals("Manager123")))
-             {
-           JOptionPane.showMessageDialog(j,"invalid credientials"); 
-         }else
-         {
-              JOptionPane.showMessageDialog(j,"welcome");  
-                
-                 }
+        JFrame f=new JFrame();  
+        
+        String m_pass = new String();
+        m_pass = "Skydiver1";
+        if (((mnameinput.equals(m_name)) &&  (mpasswordinput.equals(m_pass))))
+        {
+            
+    JOptionPane.showMessageDialog(f,"The Username or Password might be incorrect");  
+        //    Joptionpane.showMessageDialog("The Username or Password might be incorrect");
+        }
+       /* String m_pass = new String();
+        String m_pass ;
+        m_pass = "Skydiver1";
+        setPassword(m_pass) ;
+        
+        */
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void mpasswordinputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mpasswordinputActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mpasswordinputActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,5 +197,10 @@ public class managerlogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+
+
+    private javax.swing.JTextPane mnameinput;
+    private javax.swing.JPasswordField mpasswordinput;
+
     // End of variables declaration//GEN-END:variables
 }
