@@ -17,10 +17,17 @@ public class managerlogin extends javax.swing.JFrame {
     /**
      * Creates new form managerlogin
      */
+    
+    
     public managerlogin() {
         initComponents();
     }
-
+       public String getManagerPassword(String m_pswd)
+    {
+        String password = new String();
+        m_pswd = password;
+        return password;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -118,18 +125,12 @@ public class managerlogin extends javax.swing.JFrame {
         
         String m_pass = new String();
         m_pass = "Skydiver1";
-        if (((mnameinput.equals(m_name)) &&  (mpasswordinput.equals(m_pass))))
-        {
-            
-    JOptionPane.showMessageDialog(f,"The Username or Password might be incorrect");  
-        //    Joptionpane.showMessageDialog("The Username or Password might be incorrect");
+        if (!((mnameinput.equals(m_name)) &&  (mpasswordinput.equals(m_pass))))
+        {   
+            JOptionPane.showMessageDialog(f,"The Username or Password might be incorrect");  
         }
-       /* String m_pass = new String();
-        String m_pass ;
-        m_pass = "Skydiver1";
-        setPassword(m_pass) ;
-        
-        */
+        managermenu mm = new managermenu();
+        mm.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void mpasswordinputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mpasswordinputActionPerformed
