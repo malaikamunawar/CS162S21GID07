@@ -5,13 +5,16 @@
  */
 package cs162s21gid07;
 
+import java.io.File;
+import java.io.FileWriter;
+
 /**
  *
  * @author Track Computers
  */
 public class Owner extends Manager {
     private static Owner getinstance=null;
-    private Owner() {
+    Owner() {
     }
     public static Owner getinstance()
     {
@@ -39,5 +42,23 @@ public class Owner extends Manager {
   public static  String viewStock()
   {
       return "";
+  }
+  public static void SaveData(Manager ma,Stock s)
+  {
+      try{
+      FileWriter fw=new FileWriter("Owner's File.txt");
+      fw.write("Welcome to SuperMarket");
+      fw.write("Availible things     Purchasing By salesMan      amount given to Salesman");
+      for (int i=0;i<4; i++)
+      {
+          fw.write(s.remainingProduct+"   "+ma.ThingTakenBySupplier+"    "+ma.AmtGivenToSupplier);
+      }
+      fw.flush();
+      fw.close();}
+      catch(Exception ex)
+      {
+          
+      }
+      
   }
 }

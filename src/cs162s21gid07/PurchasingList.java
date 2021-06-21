@@ -9,6 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import java.io.FileWriter;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.lang.Exception;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import  javax.swing.JFrame;
 
 /**
  *
@@ -78,6 +85,8 @@ DefaultTableModel model;
         jTable1 = new javax.swing.JTable();
         delete = new javax.swing.JButton();
         update = new javax.swing.JButton();
+        savedata = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -129,6 +138,20 @@ DefaultTableModel model;
             }
         });
 
+        savedata.setText("save data");
+        savedata.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                savedataActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Make bill");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
         jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
         jInternalFrame1Layout.setHorizontalGroup(
@@ -150,8 +173,20 @@ DefaultTableModel model;
                         .addGap(105, 105, 105)
                         .addComponent(ProductName, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(delete)
+                        .addComponent(add))
+                    .addComponent(update, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createSequentialGroup()
+                        .addComponent(savedata)
+                        .addGap(18, 18, 18))))
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
                         .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jInternalFrame1Layout.createSequentialGroup()
@@ -163,15 +198,9 @@ DefaultTableModel model;
                                     .addComponent(jRadioButton2)
                                     .addComponent(jRadioButton1))))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jInternalFrame1Layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
-                        .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(delete)
-                                .addComponent(add))
-                            .addComponent(update, javax.swing.GroupLayout.Alignment.TRAILING))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jInternalFrame1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton1)))
                 .addContainerGap())
         );
         jInternalFrame1Layout.setVerticalGroup(
@@ -202,11 +231,15 @@ DefaultTableModel model;
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(delete)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(update))
+                        .addComponent(update)
+                        .addGap(50, 50, 50)
+                        .addComponent(savedata))
                     .addGroup(jInternalFrame1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -229,7 +262,7 @@ DefaultTableModel model;
         String ProdName = ProductName.getText();
              String ProdItem = ProductItem.getText();
              String price = Price.getText();
-            addRow( ProdName, ProdItem,  price);                  //ADD
+             addRow( ProdName, ProdItem,  price);                  //ADD
              ProductName.setText("");
              ProductItem.setText("");
              Price.setText("");
@@ -281,6 +314,64 @@ DefaultTableModel model;
 
     }//GEN-LAST:event_deleteActionPerformed
 
+    private void savedataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savedataActionPerformed
+        // TODO add your handling code here:
+         
+                       String ProdNameString = ProductName.getText();
+             String ProdItemString = ProductItem.getText();
+             String price = Price.getText();
+         try {
+            FileWriter fw=new FileWriter("customer.txt");
+            BufferedWriter bw=new BufferedWriter(fw);
+            fw.write("Welcome  To  SuperMarket ,\nCustomer's purchasing data,\n");
+            fw.write("Product Name           Product Item     price");
+             for(int i = 0 ; i < 9;i++)
+            {
+            fw.write(ProdNameString+""+ProdItemString+""+price);
+            }
+            bw.flush(); 
+            bw.close();
+            fw.close();
+        } catch (IOException ex) {
+          
+        
+        
+        }
+        
+    }//GEN-LAST:event_savedataActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        /*
+JFrame j=new JFrame();
+       String amount=Price.getText();
+            int cash=Integer.parseInt(amount);
+            int i=0;
+            while(i>9)
+            {
+                //int x=0;
+                //cash=x;
+                cash=cash+2;
+            }
+            String amt=Integer.toString(cash);
+        try{
+            FileWriter fw=new FileWriter("Bill.txt");
+             BufferedWriter bw=new BufferedWriter(fw);
+            fw.write("Welcome  To  SuperMarket,\n(\"Product Name    "
+                    + "       Quantity      price");
+          
+        }
+        catch(Exception ex)
+        {
+            JOptionPane.showMessageDialog(j,"found some error");
+        }*/
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+   
+//catch (Exception ex) {
+        
+   // }
     /**
      * @param args the command line arguments
      */
@@ -322,6 +413,7 @@ DefaultTableModel model;
     private javax.swing.JTextField ProductName;
     private javax.swing.JButton add;
     private javax.swing.JButton delete;
+    private javax.swing.JButton jButton1;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -331,6 +423,7 @@ DefaultTableModel model;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JButton savedata;
     private javax.swing.JButton update;
     // End of variables declaration//GEN-END:variables
 }

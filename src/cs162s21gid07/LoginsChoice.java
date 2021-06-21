@@ -28,32 +28,32 @@ public class LoginsChoice extends javax.swing.JFrame {
     private void initComponents() {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        Manager = new javax.swing.JButton();
+        Owner = new javax.swing.JButton();
+        cashier = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jInternalFrame1.setVisible(true);
 
-        jButton2.setText("Login as a manager");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Manager.setText("Login as a manager");
+        Manager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ManagerActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Login as a owner");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Owner.setText("Login as a owner");
+        Owner.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                OwnerActionPerformed(evt);
             }
         });
 
-        jButton5.setText("Login as cashier");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        cashier.setText("Login as cashier");
+        cashier.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                cashierActionPerformed(evt);
             }
         });
 
@@ -64,21 +64,21 @@ public class LoginsChoice extends javax.swing.JFrame {
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton5)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(cashier)
+                    .addComponent(Owner)
+                    .addComponent(Manager))
                 .addContainerGap(147, Short.MAX_VALUE))
         );
         jInternalFrame1Layout.setVerticalGroup(
             jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addComponent(jButton2)
+                .addComponent(Manager)
                 .addGap(26, 26, 26)
-                .addComponent(jButton1)
+                .addComponent(Owner)
                 .addGap(26, 26, 26)
-                .addComponent(jButton5)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addComponent(cashier)
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -101,22 +101,22 @@ public class LoginsChoice extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManagerActionPerformed
         managerlogin ml = new managerlogin();
         ml.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ManagerActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void OwnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OwnerActionPerformed
         // TODO add your handling code here:
         credientials c = new credientials();
         c.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_OwnerActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void cashierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cashierActionPerformed
         // TODO add your handling code here:
         cashierlogin cl = new cashierlogin();
         cl.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_cashierActionPerformed
 
     /**
      * @param args the command line arguments
@@ -155,9 +155,9 @@ public class LoginsChoice extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton Manager;
+    private javax.swing.JButton Owner;
+    private javax.swing.JButton cashier;
     private javax.swing.JInternalFrame jInternalFrame1;
     // End of variables declaration//GEN-END:variables
 }

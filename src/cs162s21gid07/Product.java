@@ -27,8 +27,8 @@ public class Product {
     this.price=amount;
     
     }
-Stack<Product> prodStack=new Stack<>(); 
-Product v=prodStack.push(vegetable);
+Stack<String> prodStack=new Stack<>(); 
+String v=prodStack.push("fre");
 //prodStack.push(vegetable);
     public Product getVegetable() {
         return vegetable;
@@ -54,14 +54,15 @@ Product v=prodStack.push(vegetable);
         this.madicineList = madicineList;
     }
 
-    public Product(Product vegetable, List Grocery, List madicineList,String sportsItem) {
+    public Product(Product vegetable, List Grocery, List madicineList,String sportsItem) 
+    {
         this.vegetable = vegetable;
         this.Grocery = Grocery;
         this.madicineList = madicineList;
     }
-   /*Iterator<Product> itr=prodStack.iterator();
-    while(itr.hasNext())
+   Iterator<String> iter=prodStack.iterator();
+   /* while (iter.hasNext())
     {
-        System.out.print(itr.next()+" ");
+        System.out.print(iter.next()+" ");
     }*/
     }

@@ -39,27 +39,36 @@ public class managerlogin extends javax.swing.JFrame {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jScrollPane1 = new javax.swing.JScrollPane();
+
+
         mnameinput = new javax.swing.JTextPane();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         mpasswordinput = new javax.swing.JPasswordField();
+
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jInternalFrame1.setVisible(true);
 
+
+
         jScrollPane1.setViewportView(mnameinput);
+
 
         jLabel1.setText("Username");
 
         jLabel2.setText("Password");
+
+
 
         mpasswordinput.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mpasswordinputActionPerformed(evt);
             }
         });
+
 
         jButton1.setText("Ok");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -82,7 +91,10 @@ public class managerlogin extends javax.swing.JFrame {
                     .addComponent(jButton1)
                     .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jScrollPane1)
+
+
                         .addComponent(mpasswordinput, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)))
+
                 .addContainerGap(45, Short.MAX_VALUE))
         );
         jInternalFrame1Layout.setVerticalGroup(
@@ -90,15 +102,18 @@ public class managerlogin extends javax.swing.JFrame {
             .addGroup(jInternalFrame1Layout.createSequentialGroup()
                 .addGap(55, 55, 55)
                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(30, 30, 30)
                 .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
+
+
                     .addComponent(mpasswordinput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(jButton1)
                 .addContainerGap(77, Short.MAX_VALUE))
+
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -116,6 +131,8 @@ public class managerlogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+ 
+
        Person Manager = new Person();
         String m_name = new String();
         m_name = "muhammadahmed";
@@ -129,9 +146,11 @@ public class managerlogin extends javax.swing.JFrame {
         {   
             JOptionPane.showMessageDialog(f,"The Username or Password might be incorrect");  
         }
+
         managermenu mm = new managermenu();
         mm.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+
+    //GEN-LAST:event_jButton1ActionPerformed
 
     private void mpasswordinputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mpasswordinputActionPerformed
         // TODO add your handling code here:
@@ -173,12 +192,17 @@ public class managerlogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextPane Name;
+    private javax.swing.JPasswordField Password;
     private javax.swing.JButton jButton1;
     private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
+
+
     private javax.swing.JTextPane mnameinput;
     private javax.swing.JPasswordField mpasswordinput;
+
     // End of variables declaration//GEN-END:variables
 }

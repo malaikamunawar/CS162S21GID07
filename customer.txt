@@ -1,0 +1,3 @@
+Welcome  To  SuperMarket ,
+Customer's purchasing data,
+Product Name           Product Item     price                                                                        

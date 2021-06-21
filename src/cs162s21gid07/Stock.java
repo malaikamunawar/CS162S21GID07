@@ -5,6 +5,8 @@
  */
 package cs162s21gid07;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.Date;
 
 /**
@@ -14,7 +16,16 @@ import java.util.Date;
 public class Stock {
     public int remainingProduct;
     private Date dateOfArrival;
-
+    private static Stock getinstance;
+    
+     public static Stock getinstance()
+    {
+        if (getinstance==null) {
+               getinstance=new Stock();
+ 
+        }
+        return getinstance;
+    }
     public Date getDateOfArrival() {
         return dateOfArrival;
     }
@@ -22,5 +33,24 @@ public class Stock {
     public void setDateOfArrival(Date dateOfArrival) {
         this.dateOfArrival = dateOfArrival;
     }
+    public static void LoadData()
+    {
+    try{
     
+    FileReader fr=new FileReader("ListOfAvailibleProduct.txt");
+    BufferedReader br=new BufferedReader(fr);
+    String Line;
+    String allData;
+    while((Line=br.readLine())!=null)
+    {
+        allData=Line;
+    }
+    br.close();
+    fr.close();
+    }  
+catch (Exception ex)
+{
+    System.err.println("File Not found");
+}
+}
 }
